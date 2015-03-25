@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tab uygulaması</title>
+	<script src="jquery-1.11.2.js"></script>
+	<script>
+		$(function(){
+			var index;
+			
+			$('ul li').on('click',function(){
+				index = $(this).index();
+
+				$('ul li').removeClass('aktif');
+				$(this).addClass('aktif');
+
+				$('.icerikler .icerik').hide();
+				$('.icerikler .icerik:eq('+index+')').show();
+
+			});
+		});
+	</script>
+	<style>
+
+		#tutucu{
+			width:580px;
+		}
+		ul{
+			list-style-type: none
+		}
+	
+		ul li{
+			background-color: #000;
+			color:#fff;
+			width:120px;
+			text-align: center;
+			margin:5px 2px;
+			padding: 5px;
+			float:left;
+			cursor:pointer;
+		}
+
+		ul li.aktif{
+			background-color: #fff;
+			color:black;
+		}
+
+		.icerik{
+			background-color: #eee;
+			border: solid 1px #ddd;
+			margin-left:40px;
+			font-size: 16px;
+			display: none;
+			padding: 10px
+		}
+
+		.icerik:nth-child(1){
+			display: block
+		}
+
+	</style>
+</head>
+<body>
+
+
+<div id="tutucu">
+
+	<ul>
+		<li class="aktif">Genel Bakış</li>
+		<li>Özellikler</li>
+		<li>Galeri</li>
+		<li>Yorumlar</li>
+	</ul>
+	
+	<div style="clear:both"></div>
+
+	<div class="icerikler">
+		<div class="icerik">
+			1 Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere 
+		</div>
+		<div class="icerik">
+			burası ikinci içerik içeriği 
+		</div>
+		<div class="icerik">
+			ben 3. tabım
+		</div>
+		<div class="icerik">
+			son icerik
+		</div>
+	</div>
+
+</div>
+
+	
+</body>
+</html>

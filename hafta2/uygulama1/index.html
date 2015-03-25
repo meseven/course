@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hafta2 Accordion</title>
+	<script src="jquery-1.11.2.js"></script>
+
+	<style>
+		.buton{
+			padding: 10px;
+			background-color: #000;
+			border: solid 1px #eee;
+			color:#fff;
+			cursor:pointer ;
+		}
+
+		#tutucu{
+			width:300px;
+		}
+		
+		.icerik{
+			display: none;
+			border: solid 1px #ddd;
+			background-color: #eee;
+			padding: 5px
+		}
+
+	</style>
+
+	<script>
+		$(function(){
+
+			$('.buton').on("click",function(){
+
+				$('.icerik').slideUp();
+				$(this).next().slideDown();
+
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="tutucu">
+
+	<div>
+		<div class="buton">Buton 1</div>
+		<div class="icerik">
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+		</div>
+	</div>
+
+	<div>
+		<div class="buton">Buton 2</div>
+		<div class="icerik">
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+		</div>
+	</div>
+
+	<div>
+		<div class="buton">Buton 3</div>
+		<div class="icerik">
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+		</div>
+	</div>
+
+	<div>
+		<div class="buton">Buton 4</div>
+		<div class="icerik">
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+			Lorem ipsum doler
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
