@@ -38,6 +38,8 @@ $(function(){
 				
 				right++;
 
+				sayi = right;
+
 				$('.buttons li').removeClass('active');
 				$('.buttons li:eq('+ right +')').addClass('active');
 			}else{
@@ -93,6 +95,8 @@ $(function(){
 		}
 
 		sayi++;
+
+		right = sayi;
 	},5000);
 
 });
