@@ -1,0 +1,44 @@
+ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+
+
+#tutucu{
+	width:585px;
+	height: 350px;
+	margin:40px auto;
+
+	overflow: hidden
+}
+
+#slider{
+	width:585px;
+	height: 300px;
+	
+	position: relative;
+}
+
+
+#slider li{
+	position: absolute;
+	width: 585px;
+}
+
+
+.buttons{
+	width:150px;
+	margin:0 auto;
+}
+.buttons li{
+	cursor: pointer;
+	width:15px;
+	height:15px;
+	border:solid 2px #000;
+	margin-right:5px;
+	float: left
+}
+.buttons li.active{
+	background: orange
+}
