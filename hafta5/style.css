@@ -1,0 +1,23 @@
+.ucak{
+	width:350px;
+	height:106px;
+	background: url(img/f16.png);
+	position: relative
+}
+
+.mermi{
+	width:12px;
+	height:6px;
+	background: #000;
+	position: absolute;
+	left:225px;
+	top:86px;
+}
+
+
+.deneme{
+	width:200px;
+	height:100px;
+	background: blue ;
+	transform: rotate(10deg);
+}
