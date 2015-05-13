@@ -5,22 +5,21 @@ $(function(){
 	$('#comment-form').on('submit',function(){
 
 		comment = $('#comment').val();
-        name    = $('#name').val();
+		name    = $('#name').val();
 
 		$.ajax({
-            beforeSend: function(){
-                $('#send_comment').addClass('loading');
-            },
-            complete: function (){
-                $('#send_comment').removeClass('loading');
-            },
+			beforeSend: function(){
+				$('#send_comment').addClass('loading');
+			},
+			complete: function (){
+				$('#send_comment').removeClass('loading');
+			},
 			data: "comment="+comment+"&name="+name+"&type=insert",
 			type: "POST",
 			url : "ajax.php",
 			success: function(data){
-
 				$('#comment').val("");
-                $('#name').val("");
+				$('#name').val("");
 
 				if(data == 'basarili'){
 					var d = new Date();
@@ -44,20 +43,16 @@ $(function(){
 
     setInterval(auto,1000);
 	
-    function auto(){
+	function auto(){
 
-          $.ajax({
-            type:"POST",
-            data:"type=query",
-            url : "ajax.php",
-            success: function(deger){
-                if(deger != "")
-                    $('#comments_area').html(deger);
-            }
-
-          })  
-      
-    }
-
-
+		$.ajax({
+			type:"POST",
+			data:"type=query",
+			url : "ajax.php",
+			success: function(deger){
+				if(deger != "")
+					$('#comments_area').html(deger);
+			}
+		})  
+	}// auto
 });
